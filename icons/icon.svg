@@ -2,7 +2,7 @@
   <!-- Keep the artwork inside the center 80% so the maskable variant crops safely.
        icon-maskable-512.png is this file rendered with rx="0": the mask shape comes
        from the launcher, so the background must bleed to the edges. -->
-  <rect width="512" height="512" rx="96" fill="#8a6c10"/>
+  <rect width="512" height="512" rx="96" fill="#7f630e"/>
   <!-- Brass-ground key, bow up, blade down, cuts on the right -->
   <path fill-rule="evenodd" fill="#ffffff"
     d="M256 76 a86 86 0 1 0 0 172 a86 86 0 0 0 0 -172 Z
