@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Keep the artwork inside the center 80% so the maskable variant crops safely.
+       icon-maskable-512.png is this file rendered with rx="0": the mask shape comes
+       from the launcher, so the background must bleed to the edges. -->
+  <rect width="512" height="512" rx="96" fill="#8a6c10"/>
+  <!-- Brass-ground key, bow up, blade down, cuts on the right -->
+  <path fill-rule="evenodd" fill="#ffffff"
+    d="M256 76 a86 86 0 1 0 0 172 a86 86 0 0 0 0 -172 Z
+       M256 120 a42 42 0 1 1 0 84 a42 42 0 0 1 0 -84 Z"/>
+  <path fill="#ffffff"
+    d="M234 240 h44 v60 h34 v28 h-34 v18 h52 v28 h-52 v16 h40 v28 h-40 v6
+       a22 22 0 0 1 -22 22 a22 22 0 0 1 -22 -22 Z"/>
+</svg>

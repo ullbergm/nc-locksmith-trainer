@@ -1,0 +1,100 @@
+/* "Polished brass" theme: the brass of keys and door hardware against warm
+   ivory neutrals, with gunmetal steel as the second metal. All the exam
+   flavor lives in the token blocks below, including the --track-texture key
+   bitting cuts ticked across the progress bar and the --track-marker brass
+   key riding its leading edge; retheme a fork by editing the tokens, nothing
+   structural.
+   Light/dark follows prefers-color-scheme unless the Settings theme override
+   sets data-theme="light"/"dark" on <html>. The dark token block therefore
+   appears twice: once for system-dark (unless overridden to light), once for
+   the explicit dark override. Keep the two copies identical. */
+:root {
+  --bg: #f6f1e2;
+  --card: #ffffff;
+  --text: #2b2410;
+  --muted: #786a45;
+  --accent: #8a6c10;
+  --accent-hi: #71570a;
+  --accent-text: #ffffff;
+  --nav-bg: #8a6c10;
+  --nav-text: #f9f0d2;
+  --accent2: #47707f;
+  --accent2-text: #ffffff;
+  --border: #e4dcc0;
+  --ok: #178a5c;
+  --ok-bg: #e3f1ea;
+  --bad: #b23a2a;
+  --bad-bg: #f7e9e4;
+  --warn: #a1470a;
+  --surface-dark: #352c13;
+  --shadow: 0 1px 2px rgba(43, 33, 10, 0.07), 0 4px 16px rgba(43, 33, 10, 0.05);
+  /* Key bitting cut across the progress track: ticks of uneven width and
+     spacing along the center line, the way the cuts of a bitting code sit
+     along a key blade — deliberately irregular, unlike a gauge scale.
+     References --accent2 (gunmetal steel), so it follows the dark palette on
+     its own; set to `none` for a plain track. Defined once here since both
+     dark blocks would keep it. */
+  --track-texture: repeating-linear-gradient(90deg,
+    transparent 0 6px, var(--accent2) 6px 8.5px, transparent 8.5px 15px,
+    var(--accent2) 15px 16.5px, transparent 16.5px 23px,
+    var(--accent2) 23px 26.5px, transparent 26.5px 32px,
+    var(--accent2) 32px 33.5px);
+  /* Brass key sliding along the bitting line at the leading edge of the
+     progress fill: round bow with a drilled hole on the left, blade with
+     three cut teeth pointing down. Inline SVG rather than an emoji: emoji
+     glyphs come from whatever emoji font the visitor has (or hasn't)
+     installed, and on Linux the marker rendered tiny or not at all. Pale
+     brass-gold, deliberately NOT the gunmetal of the tick texture, so the
+     key reads against the ticks instead of blending into them; the color is
+     baked into the data URI, so the dark blocks carry their own copy. The
+     clearance keeps the 18px marker and its 3px gap inside the layout at
+     100%. */
+  --track-marker: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><g fill="%23f2dd8f"><path fill-rule="evenodd" d="M4.4 5.2 a3.8 3.8 0 1 0 0 7.6 a3.8 3.8 0 0 0 0 -7.6 Z M4.4 7.3 a1.7 1.7 0 1 1 0 3.4 a1.7 1.7 0 0 1 0 -3.4 Z"/><rect x="7.6" y="8.1" width="9.9" height="1.9" rx="0.5"/><rect x="9.9" y="9.6" width="1.5" height="2.6"/><rect x="12.6" y="9.6" width="1.5" height="3.4"/><rect x="15.3" y="9.6" width="1.5" height="2.2"/></g></svg>');
+  --track-marker-clearance: 21px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #16120a;
+    --card: #211c0f;
+    --text: #efe6ca;
+    --muted: #b2a37a;
+    --accent: #d8b345;
+    --accent-hi: #e2c25f;
+    --accent-text: #2b2000;
+    --nav-bg: #46390a;
+    --nav-text: #f2e6bd;
+    --accent2: #6fa3b8;
+    --accent2-text: #06222d;
+    --border: #3a331d;
+    --ok: #45c08c;
+    --ok-bg: #142e23;
+    --bad: #f0836c;
+    --bad-bg: #38211b;
+    --warn: #e5a44e;
+    --surface-dark: #0f0c05;
+    --shadow: none;
+    --track-marker: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><g fill="%23eed88a"><path fill-rule="evenodd" d="M4.4 5.2 a3.8 3.8 0 1 0 0 7.6 a3.8 3.8 0 0 0 0 -7.6 Z M4.4 7.3 a1.7 1.7 0 1 1 0 3.4 a1.7 1.7 0 0 1 0 -3.4 Z"/><rect x="7.6" y="8.1" width="9.9" height="1.9" rx="0.5"/><rect x="9.9" y="9.6" width="1.5" height="2.6"/><rect x="12.6" y="9.6" width="1.5" height="3.4"/><rect x="15.3" y="9.6" width="1.5" height="2.2"/></g></svg>');
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #16120a;
+  --card: #211c0f;
+  --text: #efe6ca;
+  --muted: #b2a37a;
+  --accent: #d8b345;
+  --accent-hi: #e2c25f;
+  --accent-text: #2b2000;
+  --nav-bg: #46390a;
+  --nav-text: #f2e6bd;
+  --accent2: #6fa3b8;
+  --accent2-text: #06222d;
+  --border: #3a331d;
+  --ok: #45c08c;
+  --ok-bg: #142e23;
+  --bad: #f0836c;
+  --bad-bg: #38211b;
+  --warn: #e5a44e;
+  --surface-dark: #0f0c05;
+  --shadow: none;
+  --track-marker: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><g fill="%23eed88a"><path fill-rule="evenodd" d="M4.4 5.2 a3.8 3.8 0 1 0 0 7.6 a3.8 3.8 0 0 0 0 -7.6 Z M4.4 7.3 a1.7 1.7 0 1 1 0 3.4 a1.7 1.7 0 0 1 0 -3.4 Z"/><rect x="7.6" y="8.1" width="9.9" height="1.9" rx="0.5"/><rect x="9.9" y="9.6" width="1.5" height="2.6"/><rect x="12.6" y="9.6" width="1.5" height="3.4"/><rect x="15.3" y="9.6" width="1.5" height="2.2"/></g></svg>');
+}
