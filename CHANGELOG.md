@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/ullbergm/nc-locksmith-trainer/compare/v1.0.0...v1.1.0) (2026-08-28)
+
+
+### Features
+
+* **engine:** let a config name the tests a fresh install starts on ([4825c1d](https://github.com/ullbergm/nc-locksmith-trainer/commit/4825c1dd07a594a79c634c3ca704c4ff8a7dd3c6))
+
+
+### Bug Fixes
+
+* sync trainer-engine v2.3.0 ([4825c1d](https://github.com/ullbergm/nc-locksmith-trainer/commit/4825c1dd07a594a79c634c3ca704c4ff8a7dd3c6))
+
 ## 1.0.0 (2026-08-24)
 
 
