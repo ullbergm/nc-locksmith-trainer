@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.1](https://github.com/ullbergm/nc-locksmith-trainer/compare/v1.1.0...v1.1.1) (2026-09-27)
+
+
+### Bug Fixes
+
+* **engine:** let Dependabot bumps merge on their own once CI passes ([d9e5e5a](https://github.com/ullbergm/nc-locksmith-trainer/commit/d9e5e5a134dac9f53af790fa3171757587bfa713))
+* sync trainer-engine v2.3.1 ([d9e5e5a](https://github.com/ullbergm/nc-locksmith-trainer/commit/d9e5e5a134dac9f53af790fa3171757587bfa713))
+
 ## [1.1.0](https://github.com/ullbergm/nc-locksmith-trainer/compare/v1.0.0...v1.1.0) (2026-08-28)
 
 
